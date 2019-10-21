@@ -1,1 +1,124 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.container a {
+    color: white;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.blue-button{
+    background:#7700FF;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+    padding:3px 5px;
+    color:#fff;
+    font-family:'Helvetica Neue',sans-serif;
+    font-size:12px;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:4px;
+    border:1px solid #7700FF;
+   }     
+    
+   .red-button{
+    background: #CD5C5C;
+    
+    padding:3px 5px;
+    color:#fff;
+    font-family:'Helvetica Neue',sans-serif;
+    font-size:12px;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:4px;
+    border:1px solid #CD5C5C
+   }      
+    
+   table {
+     font-family: "Helvetica Neue", Helvetica, sans-serif;
+      width: 80%;
+   }
+   table table {
+     width: 100%;
+  }
+  .light-button{
+    background:#fff;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+    padding:3px 5px;
+    float: right;
+    color:#7700FF;
+    font-family:'Helvetica Neue',sans-serif;
+    font-size:12px;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:4px;
+    border:1px solid #7700FF;
+   }  
+   caption {
+     text-align: left;
+     color: silver;
+     font-weight: bold;
+     text-transform: uppercase;
+     padding: 5px;
+   }
+    
+   th {
+     background: #7700FF;
+     color: white;
+   }
+    
+    
+   tbody tr:nth-child(even) {
+     background: WhiteSmoke;
+   }
+    
+   tbody tr td:nth-child(2) {
+     text-align:center;
+   }
+    
+   tbody tr td:nth-child(3),
+   tbody tr td:nth-child(4) {
+     text-align: center;
+     font-family: monospace;
+   }
+    
+   tfoot {
+     background: SeaGreen;
+     color: white;
+     text-align: right;
+   }
+    
+   tfoot tr th:last-child {
+     font-family: monospace;
+   }
+    
+               td,th{
+                   border: 1px solid gray;
+                   width: 25%;
+                   text-align: left;
+                   padding: 5px 10px;
+               } 

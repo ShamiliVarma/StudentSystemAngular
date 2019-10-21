@@ -1,0 +1,69 @@
+<div>
+    <fieldset>
+        <legend>Student Contact Details</legend>
+        <label for="studentIdC">Enter Student Id </label>
+        <input [value]="studentIdC" id="studentIdC" (input)="studentIdC = $event.target.value"/>
+        <input (click)="getContactDetails()" type="button" value="Enter"/>
+        <div *ngIf="displayStudentDetails">
+            <h4>Contact Details</h4>
+            <p *ngIf="errorMessageBlock; else studentDetailsBlock" >{{errorMessage}}</p>
+            <ng-template #studentDetailsBlock>
+                <table>
+                    <tr>
+                        <th>Student Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Address</th>
+                        <th>emailId</th>
+                    </tr>
+                    <tr>
+                        <td>{{student.studentId}}</td>
+                        <td>{{student.firstName}}</td>
+                        <td>{{student.lastName}}</td>
+                        <td>{{student.address}}</td>
+                        <td>{{student.emailId}}</td>
+                    </tr>
+                </table>
+            </ng-template>
+            
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Student Enrolled Units</legend>
+        <label for="studentIdE">Enter Student Id</label>
+        <input [value]="studentIdE" id="studentIdE" (input)="studentIdE = $event.target.value"/>
+        <input (click)="getEnrolmentDetails()" type="button" value="Enter"/>
+        <div *ngIf="displayEnrolmentDetails">
+            <h4>Enrolment Details</h4>
+            <ul *ngFor="let unit of enrolment">
+                <li>{{unit}}</li>
+            </ul>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Unit Details</legend>
+        <label for="unitCode">Enter Unit code</label>
+        <input [value]="unitCode" id="unitCode" (input)="unitCode = $event.target.value"/>
+        <input (click)="getUnitDetails()" type="button" value="Enter"/>
+        <div *ngIf="displayUnitDetails">
+            <h2>Unit Details</h2>
+            <p *ngIf="errorMessageBlock; else unitDetailsBlock" >{{errorMessage}}</p>
+            <ng-template #unitDetailsBlock>
+                <table>
+                    <tr>
+                        <th>Unit Code</th>
+                        <th>Unit Name</th>
+                        <th>Level</th>
+                        <th>Terms</th>
+                    </tr>
+                    <tr>
+                        <td>{{unit.unitCode}}</td>
+                        <td>{{unit.unitName}}</td>
+                        <td>{{unit.level}}</td>
+                        <td>{{unit.terms}}</td>
+                    </tr>
+                </table>
+            </ng-template>
+        </div>
+    </fieldset>
+</div>
