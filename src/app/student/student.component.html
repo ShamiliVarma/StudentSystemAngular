@@ -30,7 +30,7 @@
     </fieldset>
     <fieldset>
         <legend>Student Enrolled Units</legend>
-        <label for="studentIdE">Enter Student Id</label>
+        <label for="studentIdE">Enter Student Id </label>
         <input [value]="studentIdE" id="studentIdE" (input)="studentIdE = $event.target.value"/>
         <input (click)="getEnrolmentDetails()" type="button" value="Enter"/>
         <div *ngIf="displayEnrolmentDetails">
@@ -42,7 +42,7 @@
     </fieldset>
     <fieldset>
         <legend>Unit Details</legend>
-        <label for="unitCode">Enter Unit code</label>
+        <label for="unitCode">Enter Unit code </label>
         <input [value]="unitCode" id="unitCode" (input)="unitCode = $event.target.value"/>
         <input (click)="getUnitDetails()" type="button" value="Enter"/>
         <div *ngIf="displayUnitDetails">

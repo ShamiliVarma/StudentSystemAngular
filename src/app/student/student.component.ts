@@ -59,8 +59,12 @@ export class StudentComponent implements OnInit {
     this.studentService.getUnitDetails(this.unitCode)
           .subscribe(data =>{
             this.displayUnitDetails = true;
-            this.unit = data;
-            console.log(this.unit);
+            if(data.unitCode!=null){
+              this.unit = data;
+            }else{
+              this.errorMessageBlock = true;
+              this.errorMessage = data.errorMessage;
+            }
           });
   }
 
